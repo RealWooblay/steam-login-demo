@@ -1,14 +1,9 @@
-"use client";
+import Link from 'next/link';
 
-export default function Home() {
-  const handleLogin = () => {
-    window.location.href = '/api/auth/steam';
-  };
-
+export default function LoginButton() {
   return (
-    <div>
-      <h1>Steam Login Demo</h1>
-      <button onClick={handleLogin}>Login with Steam</button>
-    </div>
+    <Link href="/api/auth/steam-login">
+      <button>Login with Steam</button>
+    </Link>
   );
 }
